@@ -79,7 +79,7 @@ const Header = ({ showSidebar, setShowSidebar }) => {
                     </Link>
                 </Tooltip>
                 <Tooltip placement="bottom" title="Visit Website">
-                    <Link to={"https://genters.com.bd/"} target="_blank">
+                    <Link to={"https://styleica.com/"} target="_blank">
                         <FaGlobe className="text-xl opacity-70" />
                     </Link>
                 </Tooltip>
