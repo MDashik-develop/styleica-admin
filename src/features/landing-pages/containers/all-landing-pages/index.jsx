@@ -154,7 +154,7 @@ const AllLandingPages = () => {
             key: "actions",
             render: (row) => (
                 <div className="flex items-center gap-2">
-                    <Link to={`https://shop.genters.com.bd?slug=${row?.page_slug}`} target="_blank">
+                    <Link to={`https://shop.styleica.com/?slug=${row?.page_slug}`} target="_blank">
                         <ViewButton />
                     </Link>
                     <Link to={`/landing-pages/manage/${row.id}`}>
