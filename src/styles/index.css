@@ -1,0 +1,191 @@
+/* google font */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #005555;
+  --color-secondary: #fdc700;
+  --color-light: #fff;
+  --color-dark: #212121;
+
+  --font-primary: "Lato", sans-serif;
+
+  /* --breakpoint-sm: 600px;
+    --breakpoint-xl: 1280px;
+    --breakpoint-2xl: 1536px;
+    --container-padding: 100px;
+    --container-center: true; */
+}
+
+body {
+  @apply text-xs md:text-sm 2xl:text-base font-primary bg-light;
+}
+
+/* remove arrow from number input */
+input[type="number"] {
+  /* Firefox */
+  -moz-appearance: textfield;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  /* Chrome, Safari, Edge, Opera */
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+/* --------- title -------- */
+.title {
+  @apply text-lg md:text-xl 2xl:text-2xl font-semibold capitalize pb-3 lg:pb-4;
+}
+
+.sub-title {
+  @apply text-base md:text-xl font-semibold capitalize;
+}
+
+.section-title {
+  @apply text-dark text-base lg:text-lg font-semibold;
+}
+
+/* --------- button ---------- */
+button {
+  @apply cursor-pointer;
+}
+
+.button {
+  @apply w-fit bg-primary px-4 py-1.5 flex items-center gap-2 text-light text-xs md:text-sm disabled:cursor-not-allowed disabled:opacity-70;
+}
+
+.button-outline {
+  @apply w-fit bg-transparent px-4 py-1.5 flex items-center gap-2 text-primary border border-slate-300 text-xs md:text-sm disabled:cursor-not-allowed disabled:opacity-70;
+}
+
+.icon-button {
+  @apply w-fit flex items-center gap-2;
+}
+
+/* --------- card ---------- */
+.card {
+  @apply w-full bg-light p-5 shadow border border-slate-200;
+}
+
+.custom-gradient {
+  @apply bg-gradient-to-r from-primary/10 via-pink-100 to-secondary/10;
+}
+
+.err-msg {
+  @apply text-center text-red-600 font-semibold;
+}
+
+/* -------- custom scrollbar ------------ */
+.custom-scrollbar {
+  overflow: auto;
+
+  /* Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: #b5b5b5 #f1f1f1;
+}
+
+/* Chrome, Edge, Safari, Opera */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #b5b5b5;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
+
+
+/* --------- sidebar (hidden scrollbar but scrollable) --------- */
+.sidebar {
+  overflow-y: auto;
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE & Edge */
+  box-shadow: 2px 0 6px -2px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari, Opera */
+}
+
+@keyframes blink-bg {
+
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+    background-color: var(--blink-on, var(--color-primary));
+  }
+
+  25%,
+  75% {
+    opacity: 0.9;
+    background-color: var(--blink-off, color-mix(in srgb, var(--color-primary) 60%, white));
+  }
+}
+
+.blink-bg {
+  animation: blink-bg 2.5s infinite ease-in-out;
+}
+
+
+
+/* antd css */
+:where(.css-dev-only-do-not-override-tjsggz).ant-tag {
+  margin-inline-end: 0 !important;
+}
+
+:where(.css-dev-only-do-not-override-tjsggz).ant-tag {
+  width: fit-content;
+}
+
+/* .ant-input,
+.ant-select-selection-item,
+.ant-select-selection-placeholder,
+.ant-picker-input>input {
+  color: #000 !important;
+  opacity: 1 !important;
+} */
+
+
+/* এডিটরের উচ্চতা এবং বর্ডার ঠিক করা */
+.ck-editor__editable_inline {
+    min-height: 300px;
+    border: 1px solid #d1d5db !important; /* tailwind gray-300 */
+    border-radius: 0 0 0.5rem 0.5rem !important;
+    padding: 0 20px !important;
+}
+
+/* টুলবার স্টাইল */
+.ck-toolbar {
+    border-radius: 0.5rem 0.5rem 0 0 !important;
+    background-color: #f9fafb !important; /* tailwind gray-50 */
+}
+
+/* এডিটরের ভেতরের টেক্সট লিস্টের স্টাইল ঠিক করা (যেহেতু prose নেই) */
+.ck-content ul {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+}
+.ck-content ol {
+    list-style-type: decimal;
+    margin-left: 1.5rem;
+}
+.ck-content h2 { font-size: 1.5rem; font-weight: bold; }
+.ck-content h3 { font-size: 1.25rem; font-weight: bold; }

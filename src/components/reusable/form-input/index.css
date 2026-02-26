@@ -1,0 +1,93 @@
+/* index.css */
+
+/* --- General Input, Select, DatePicker, TextArea, etc. --- */
+.ant-input,
+.ant-select-selector,
+.ant-picker,
+.ant-input-password,
+.ant-input-textarea,
+.ant-input-number,
+.ant-upload-select,
+.ant-radio-wrapper,
+.ant-checkbox-wrapper {
+    border-radius: 0 !important;
+    border-color: #d3dada !important;
+    color: #212121 !important;
+    /* padding: 6px 14px !important; */
+}
+
+/* --- Focus State --- */
+.ant-input:focus,
+.ant-select-selector:focus,
+.ant-picker-focused,
+.ant-input-password:focus,
+.ant-input-affix-wrapper-focused {
+    border-color: #212121 !important;
+    color: #212121 !important;
+    box-shadow: 0 0 0 1px #00555533 !important;
+}
+
+/* --- Text Color inside Input Fields --- */
+.ant-input,
+.ant-select-selection-item,
+.ant-select-selection-placeholder,
+.ant-picker-input>input {
+    color: #005555 !important;
+}
+
+/* --- Placeholder Color --- */
+::placeholder {
+    /* color: #007777 !important; */
+    /* opacity: 0.7 !important; */
+}
+
+/* --- Select Dropdown Items --- */
+.ant-select-item-option {
+    color: #005555 !important;
+}
+
+.ant-select-item-option-selected {
+    background-color: #e6f4f4 !important;
+}
+
+/* --- Buttons inside Upload --- */
+.ant-btn {
+    border-radius: 0 !important;
+    color: #005555 !important;
+    border-color: #005555 !important;
+}
+
+.ant-btn:hover {
+    background-color: #005555 !important;
+    color: white !important;
+}
+
+/* --- Radio and Checkbox --- */
+.ant-radio-inner,
+.ant-checkbox-inner {
+    border-color: #005555 !important;
+}
+
+.ant-radio-checked .ant-radio-inner,
+.ant-checkbox-checked .ant-checkbox-inner {
+    background-color: #005555 !important;
+    border-color: #005555 !important;
+}
+
+:where(.css-dev-only-do-not-override-tjsggz).ant-form-item .ant-form-item-label>label {
+    font-weight: 600 !important;
+}
+
+/* --- Remove Number Input Arrows (Ant Design Only) --- */
+
+/* For Chrome, Edge, Safari, Opera */
+.ant-input[type="number"]::-webkit-inner-spin-button,
+.ant-input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none !important;
+    margin: 0 !important;
+}
+
+/* For Firefox */
+.ant-input[type="number"] {
+    -moz-appearance: textfield !important;
+}
