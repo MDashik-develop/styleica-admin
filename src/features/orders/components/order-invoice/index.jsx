@@ -68,7 +68,7 @@ const OrderInvoice = ({ order }) => {
             >
                 <h3 style={{ margin: 0, fontSize: "13px", fontWeight: "700" }}>{siteConfig?.companyName}</h3>
                 <p style={{ margin: "2px 0", fontSize: "9px" }}>Help Line: {siteConfig?.phone}</p>
-                <p style={{ margin: 0, fontSize: "9px", color: "#444" }}>www.genters.com</p>
+                <p style={{ margin: 0, fontSize: "9px", color: "#444" }}>{siteConfig?.siteUrl}</p>
             </div>
 
             {/* ===== Invoice Info ===== */}
